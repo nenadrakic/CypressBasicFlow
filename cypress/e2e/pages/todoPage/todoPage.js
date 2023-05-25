@@ -28,6 +28,5 @@ class TodoPage {
   getLastTodoText() {
     return cy.get(elements.TODOPAGE.CHECKBOX_TEXT).last().invoke('text')
   }
-
   }
   export default TodoPage
