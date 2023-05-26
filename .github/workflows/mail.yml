@@ -6,7 +6,7 @@ on:
 jobs:
   Test-on-Chrome:
     runs-on: ubuntu-latest
-     strategy:
+    strategy:
       fail-fast: false
       matrix:
         containers: [1, 2]
