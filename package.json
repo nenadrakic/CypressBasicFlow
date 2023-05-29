@@ -5,26 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-
     "cy:stag:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser chrome --record --group chrome",
     "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser firefox --record --group firefox",
     "cy:stag:parallel": "npm run cy:stag:parallel:chrome & npm run cy:stag:parallel:firefox",
     "cy:stag:parallel:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser chrome --record --group chrome --parallel",
     "cy:stag:parallel:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser firefox --record --group firefox --parallel",
-
-
     "cy:dev:mozilla": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser firefox --record --parallel",
     "cy:stag:mozilla": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record --parallel",
-
-
     "cy:dev:chr": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --parallel --record",
     "cy:stag:chr": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --parallel --record",
-
-
     "cy:dev:googlechrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --record",
     "cy:stag:googlechrome": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --record",
-
-
     "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
     "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/"
   },
@@ -36,6 +27,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^12.12.0",
     "cypress-mochawesome-reporter": "^3.5.0",
+    "cypress-split": "^1.3.11",
     "process": "^0.11.10"
   },
   "cypress-cucumber-preprocessor": {
