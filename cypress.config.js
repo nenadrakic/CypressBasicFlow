@@ -1,6 +1,7 @@
 
 
 const { defineConfig } = require("cypress");
+const cypressSplit = require('cypress-split')
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
@@ -17,6 +18,7 @@ module.exports = defineConfig({
       preprocessor.addCucumberPreprocessorPlugin(on, config);
       //--require('cypress-mochawesome-reporter/plugin')(on);
       // Make sure to return the config object as it might have been modified by the plugin.
+      cypressSplit(on, config)
       return config;
     },
     //specPattern: '**/feature/*.{feature, features}',
