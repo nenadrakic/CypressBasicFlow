@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2, 3]
+        containers: [1, 2]
     steps:
         - name: Checkout GitCode
           uses: actions/checkout@v3.3.0
@@ -54,7 +54,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2, 3]
+        containers: [1, 2]
     steps:
         - name: Checkout GitCode
           uses: actions/checkout@v3.3.0
