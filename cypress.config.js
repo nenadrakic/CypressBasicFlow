@@ -15,7 +15,7 @@ module.exports = defineConfig({
         })
       );
       preprocessor.addCucumberPreprocessorPlugin(on, config);
-      require('cypress-mochawesome-reporter/plugin')(on);
+      //--require('cypress-mochawesome-reporter/plugin')(on);
       // Make sure to return the config object as it might have been modified by the plugin.
       return config;
     },
@@ -24,15 +24,15 @@ module.exports = defineConfig({
     excludeSpecPattern: '**/pages/*',
     videosFolder: "cypress/reports/videos",
     screenshotsFolder: "cypress/reports/screenshots",
-    reporter: 'cypress-mochawesome-reporter',
-    reporterOptions: {
-      reportDir: "cypress/reports/mochawesome-report",
-      charts: true,
-      reportPageTitle: 'custom-title',
-      embeddedScreenshots: true,
-      inlineAssets: true,
-      saveAllAttempts: false,
-    },
+    //--reporter: 'cypress-mochawesome-reporter',
+    // reporterOptions: {
+    //   reportDir: "cypress/reports/mochawesome-report",
+    //   charts: true,
+    //   reportPageTitle: 'custom-title',
+    //   embeddedScreenshots: true,
+    //   inlineAssets: true,
+    //   saveAllAttempts: false,
+    // },
     projectId: "z2oxy6",
   },
 });
