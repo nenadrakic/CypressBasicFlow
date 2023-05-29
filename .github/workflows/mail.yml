@@ -24,7 +24,7 @@ jobs:
           with:
             record: true
             parallel: true
-            command: "npm run cy:stag:chrome"
+            command: "npm run cy:stag:parallel"
           env:
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         
@@ -69,7 +69,7 @@ jobs:
           with:
             record: true
             parallel: true
-            command: "npm run cy:stag:firefox"
+            command: "npm run cy:stag:parallel"
           env:
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         
