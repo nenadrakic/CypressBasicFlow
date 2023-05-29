@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:dev:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --record",
-    "cy:stag:chrome": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --record",
+    "cy:dev:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --parallel --record",
+    "cy:stag:chrome": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --parallel --record",
     "cy:dev:firefox": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser firefox --record --parallel",
     "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record --parallel",
     "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
