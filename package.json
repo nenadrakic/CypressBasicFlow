@@ -17,6 +17,10 @@
     "cy:stag:mozilla": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record --parallel",
 
 
+    "cy:dev:chr": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --parallel --record",
+    "cy:stag:chr": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --parallel --record",
+
+
     "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
     "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/"
   },
