@@ -1,5 +1,6 @@
-name: ci
-push:
+name: BAHMUTOV!!!
+on:
+  push:
     branches: [dev, stag, master]
 jobs:
   test:
