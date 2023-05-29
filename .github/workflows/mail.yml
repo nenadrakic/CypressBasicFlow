@@ -27,25 +27,17 @@ jobs:
             command: "npm run cy:stag:parallel"
           env:
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-        
-        # Known issue: doesn't record video for Firefox (https://github.com/cypress-io/cypress/issues/18415)    
-        - name: Upload Videos to Build Artifacts
-          uses: actions/upload-artifact@v3.1.2
-          if: always()
-          with:
-            name: cypress-videos-firefox
-            path: "${{ github.workspace }}/cypress/reports/videos/"
 
         - name: Upload Screenshots to Build Artifacts
           uses: actions/upload-artifact@v3.1.2
           if: failure()
           with:
-            name: cypress-screenshots-firefox
+            name: cypress-screenshots
             path: "${{ github.workspace }}/cypress/reports/screenshots/"
         
         - name: Upload Mocha report to Build Artifacts
           uses: actions/upload-artifact@v3.1.2
           if: always()
           with:
-            name: cypress-mocha-firefox
+            name: cypress-mocha
             path: "${{ github.workspace }}/cypress/reports/html/"
