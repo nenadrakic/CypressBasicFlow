@@ -8,9 +8,10 @@
 
 
 
-
+    "cy:stag:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser chrome --record --group chrome",
     "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser firefox --record --group firefox",
     "cy:stag:parallel": "npm run cy:stag:parallel:chrome & npm run cy:stag:parallel:firefox",
+    "cy:stag:parallel:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser chrome --record --group chrome --parallel",
     "cy:stag:parallel:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --spec cypress/e2e/features/*.feature --browser firefox --record --group firefox --parallel",
 
 
