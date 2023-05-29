@@ -5,8 +5,8 @@ import TodoPage from '../../e2e/pages/todoPage/todoPage'
 const todoPage = new TodoPage()
 
 Given('I open the Todo page app', () => {
-    cy.visit('/')
-    //cy.visit('http://stagtodo.monfared.io/')
+    //cy.visit('/')
+    cy.visit('http://stagtodo.monfared.io/')
     cy.contains('Environment Todo')
   })
 
