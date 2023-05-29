@@ -4,7 +4,7 @@ on:
     branches: [dev, stag, master]
 
 jobs:           
-  Test-on-Firefox & Chrome:
+  Test-on-Firefox-and-Chrome:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
