@@ -1,5 +1,6 @@
 name: ci
-on: [push]
+push:
+    branches: [dev, stag, master]
 jobs:
   test:
     # https://github.com/bahmutov/cypress-workflows
